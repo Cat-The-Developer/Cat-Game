@@ -1,5 +1,5 @@
 function GamePageRedirect() {
-  window.location.href = "/game.html";
+  window.location.pathname = "/Cat-Game/game.html";
 }
 
 function catPosition() {
@@ -26,14 +26,14 @@ function chocoPosition() {
       .querySelector(".chocolateDisplay")
       .insertAdjacentHTML(
         "beforeend",
-        `<img class='fallingChoco' style="left: ${chocoLeft}px" src='/assets/chocolate.webp' />`
+        `<img class='fallingChoco' style="left: ${chocoLeft}px" src='./assets/chocolate.webp' />`
       );
   } else {
     document
       .querySelector(".chocolateDisplay")
       .insertAdjacentHTML(
         "beforeend",
-        `<img class='fallingChoco' style="left: 0px" src='/assets/chocolate.webp' />`
+        `<img class='fallingChoco' style="left: 0px" src='./assets/chocolate.webp' />`
       );
   }
 }
@@ -81,7 +81,7 @@ function collision() {
         if (viewScore > highScore) {
           window.localStorage.setItem("High Score", viewScore);
         }
-        window.location.href = "/gameOver.html";
+        window.location.pathname = "/Cat-Game/gameOver.html";
       }
     }
   }
