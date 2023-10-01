@@ -75,12 +75,6 @@ function collision() {
       if (chocoBoxTop >= catBoxTop && chocoBoxBottom <= catBoxBottom) {
         const viewScore = document.querySelector(".displayingScore").innerHTML;
         window.localStorage.setItem("score", viewScore);
-
-        const highScore = window.localStorage.getItem("High Score");
-
-        if (viewScore > highScore) {
-          window.localStorage.setItem("High Score", viewScore);
-        }
         window.location.pathname = "/Cat-Game/gameOver.html";
       }
     }
@@ -89,10 +83,8 @@ function collision() {
 
 if (window.location.pathname == "/Cat-Game/gameOver.html") {
   const score = window.localStorage.getItem("score");
-  const highScore = window.localStorage.getItem("High Score");
 
   document.querySelector(".totalScore").innerHTML = score;
-  document.querySelector(".highScore").innerHTML = highScore;
 }
 
 if (window.location.pathname == "/Cat-Game/game.html") {
