@@ -87,7 +87,7 @@ function collision() {
   }
 }
 
-if (window.location.pathname = "/Cat-Game/gameOver.html") {
+if (window.location.pathname == "/Cat-Game/gameOver.html") {
   const score = window.localStorage.getItem("score");
   const highScore = window.localStorage.getItem("High Score");
 
@@ -95,8 +95,10 @@ if (window.location.pathname = "/Cat-Game/gameOver.html") {
   document.querySelector(".highScore").innerHTML = highScore;
 }
 
-catPosition();
-setInterval(chocoPosition, 700);
-setInterval(collision);
-setInterval(chocoRemover, 700);
-setInterval(scoreMaker, 1000);
+if (window.location.pathname == "/Cat-Game/game.html") {
+  catPosition();
+  setInterval(chocoPosition, 700);
+  setInterval(collision);
+  setInterval(chocoRemover, 700);
+  setInterval(scoreMaker, 1000);
+}
