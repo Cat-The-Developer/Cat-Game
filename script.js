@@ -87,7 +87,7 @@ function collision() {
   }
 }
 
-if (window.location.pathname === "/gameOver.html") {
+if (window.location.pathname = "/Cat-Game/gameOver.html") {
   const score = window.localStorage.getItem("score");
   const highScore = window.localStorage.getItem("High Score");
 
